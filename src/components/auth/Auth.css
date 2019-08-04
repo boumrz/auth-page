@@ -1,0 +1,74 @@
+body {
+  background-image: url("background.jpg");
+}
+
+.forgot-a a {
+  position: absolute;
+  color: #fff;
+  margin: -30px -56px;
+}
+
+.signin-a {
+  /*position: absolute;*/
+  color: #3adbfd;
+}
+
+.signin-a a {
+  color: #fff;
+  padding-left: 5px;
+}
+
+a:hover {
+  /*text-decoration: none;*/
+
+}
+
+.container-form {
+  width: 456px;
+  height: 500px;
+  background-color: rgba(25, 25, 112, 0.5);
+  margin: 200px auto 0 auto;
+  text-align: center;
+  border-radius: 10%;
+  box-shadow: 0 -4px 0 #3adbfd;
+}
+
+.container-form .signin-h1 {
+  color: lightyellow;
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+}
+
+.container-form .login-form {
+  padding: 5px;
+}
+
+.container-form .login-form label {
+  color : #fff;
+}
+
+.submit-input {
+  padding: 13px 40px;
+  margin: 25px 0 20px 0;
+  color: #fff;
+  background-color: #000080;
+  border: none;
+  border-bottom: 4px solid #3adbfd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.submit-input:hover {
+  transition: all 0.5s;
+  background-color: #0000CD;
+}
+
+input[type="email"], input[type="password"] {
+  width: 300px;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 10px;
+  padding-left: 10px;
+  border: none;
+}

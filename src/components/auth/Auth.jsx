@@ -1,6 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 import React, { Component } from 'react';
-import './Auth.css';
+import '../../styles/Auth.css';
+import '../ui/Checkbox.css';
+// eslint-disable-next-line import/no-cycle
+import '../main/Main';
 // import axios from 'axios';
 // import PropTypes from 'prop-types';
 
@@ -12,6 +15,10 @@ export default class Auth extends React.Component {
   // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props);
+    this.submitHandler = this.submitHandler.bind(this);
+    this.loginHandler = this.loginHandler.bind(this);
+    this.registerHandler = this.registerHandler.bind(this);
+
 
     // this.state = {
     //   loading: false,
@@ -50,38 +57,47 @@ export default class Auth extends React.Component {
     // const { loading, login, password } = this.state;
 
     return (
-      <body>
-        <form className="container-form" onSubmit={this.submitHandler}>
 
-          <h1 className="signin-h1">Log In</h1>
+      <div className="login-block">
+        <form className="form-element1" onSubmit={this.submitHandler}>
 
-          <div className="login-form">
-            <input type="email" name="emailAddress" placeholder="Enter email" />
+          <div className="login-title">
+            <h1>Log In</h1>
           </div>
-          <div className="login-form">
-            <input type="password" name="emailPassword" placeholder="Enter password" />
+
+          <div className="form-control">
+            <div>
+              <input type="email" className="form-element" name="emailAddress" placeholder="Enter email" />
+            </div>
+
+            <div>
+              <input type="password" className="form-element" name="emailPassword" placeholder="Enter password" />
+            </div>
           </div>
-          <div className="login-form">
-            <label className="checkbox-label">
-              <input type="checkbox" className="checkbox-input" value="remember-me" />
-                Remember me
+
+          <div className="checkBox-input">
+            <label className="container">
+              <input className="checkBox" type="checkbox" />
+              <span className="checkmark" />
+              <label className="checkbox-name">Remember me</label>
             </label>
           </div>
-          <div className="login-form">
+
+          <div className="form-control">
             <input className="submit-input" type="submit" name="emailSubmit" value="LOGIN" />
           </div>
-          <br />
-          <div className="forgot-a">
+
+          <div className="forgot-password">
             <a href="#">Forgot password?</a>
           </div>
 
-          <div className="signin-a">
+          <div className="registration-in">
             New here?
             <a href="#">Sign in!</a>
           </div>
-        </form>
 
-      </body>
+        </form>
+      </div>
     );
   }
 }

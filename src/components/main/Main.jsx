@@ -1,6 +1,5 @@
 import React from 'react';
 import { Redirect } from 'react-router-dom';
-import TekoLogo from '../../assets/svg/teko-logo.svg';
 
 export default class Main extends React.PureComponent {
   constructor(props) {
@@ -25,24 +24,12 @@ export default class Main extends React.PureComponent {
   }
 
   render() {
-    const { loading, user } = this.state;
-
-    if (loading) {
-      return (
-        <div className="main-page">
-          Загрузка...
-        </div>
-      );
-    }
+    const { user } = this.state;
 
     if (!user.isAuthenticated) {
       return <Redirect to="/auth" />;
     }
 
-    return (
-      <div className="main-page">
-        <TekoLogo />
-      </div>
-    );
+    return <Redirect to="/" />;
   }
 }

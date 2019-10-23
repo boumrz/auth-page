@@ -148,6 +148,11 @@ const config = {
     port: 3030,
     host: 'localhost',
     historyApiFallback: true,
+    // before: function(app, server) {
+    //   app.get('/users/me', function(req, res) {
+    //     res.json({ custom: 'response' });
+    //   });
+    // }
   },
 };
 

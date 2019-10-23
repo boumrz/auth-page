@@ -1,0 +1,30 @@
+.input {
+  margin-bottom: 15px;
+
+  label {
+    margin-bottom: 3px;
+    padding: 0;
+    display: block;
+    font-weight: bold;
+  }
+
+  input {
+    padding: 7px;
+
+    &:hover {
+      background: lightyellow;
+    }
+  }
+
+  .input-error {
+    /*display: none;*/
+    color: #f01f30;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.input.invalid input {
+  /*display: none;*/
+  border: 2px solid #f01f30;
+}

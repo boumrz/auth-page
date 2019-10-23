@@ -13,6 +13,7 @@
       "ignoreStrings": true,
       "ignoreTemplateLiterals": true
     }],
+    "no-console": "off",
     "import/no-unresolved": "off",
     "class-methods-use-this": "off",
     "spaced-comment": "off",
